@@ -1,5 +1,4 @@
 import discord
-import requests
 import sys
 
 from discord.ext import commands
@@ -25,14 +24,71 @@ class CogPython(commands.Cog):
     async def on_ready(self):
         print("Module: Python Helper is ready !")
 
+    @commands.command(name="pyflist", aliases=["function_list"])
+    @commands.cooldown(rate=1, per=5, type=commands.BucketType.user)
+    async def pyflist(self, ctx, module):
+
+        module = module.strip()
+
+        self.help_function_x = [f for f in dir(module) if f[0:2] != "__"]
+
+        result = ""
+        result_old = ""
+        i = 1
+
+        for word in self.help_function_x:
+            result += word + "\n"
+            if len(result) >= 4000:
+                embed_flist = discord.Embed(colour=discord.Colour.from_rgb(255, 217, 71),
+                                            title=f'Ensembles des fonctions du module `{module}` (page {i})',
+                                            description=f"{result_old}")
+
+                await ctx.send(embed=embed_flist)
+
+                i += 1
+                result = ""
+                result_old = ""
+
+            result_old += word + "\n"
+
+        if len(result) > 0:
+            embed_flist = discord.Embed(colour=discord.Colour.from_rgb(255, 217, 71),
+                                        title=f'Ensembles des fonctions du module `{module}` (page {i})',
+                                        description=f"{result_old}")
+
+            await ctx.send(embed=embed_flist)
+
     @commands.command(name="stdlib", aliases=["pylibs"])
     @commands.cooldown(rate=1, per=5, type=commands.BucketType.user)
     async def stdlib(self, ctx):
 
-        self.char = "'"
+        result = ""
+        result_old = ""
+        i = 1
 
-        await ctx.send(f"{ctx.author.mention} voici la liste des fonctions de la library standard:\n"
-                       f'{str(self.std_lib).replace("[", "```").replace("]", "```").replace(self.char, "")} ')
+        for word in self.std_lib:
+            result += word + "\n"
+            if len(result) >= 4000:
+                embed_module = discord.Embed(colour=discord.Colour.from_rgb(255, 217, 71),
+                                             title=f'Ensembles des fonctions des modules de la librairie standard'
+                                                   f' (page {i})',
+                                             description=f"{result_old}")
+
+                await ctx.send(embed=embed_module)
+
+                i += 1
+                result = ""
+                result_old = ""
+
+            result_old += word + "\n"
+
+        if len(result) > 0:
+            embed_module = discord.Embed(colour=discord.Colour.from_rgb(255, 217, 71),
+                                         title=f'Ensembles des fonctions des modules de la librairie standard'
+                                               f' (page {i})',
+                                         description=f"{result_old}")
+
+            await ctx.send(embed=embed_module)
 
     @stdlib.error
     async def stdlib_error(self, ctx, error):
@@ -54,30 +110,33 @@ class CogPython(commands.Cog):
             i = 1
 
             for word in self.help_function_x:
-                result += word + " "
+                result += word + "\n"
                 if len(result) >= 4000:
-                    embed_function = discord.Embed(colour=discord.Colour.from_rgb(255, 217, 71),
-                                                   title=f'Documentation offline du module `{module}` (page {i})',
-                                                   description=f"{result_old}")
-                    await ctx.send(embed=embed_function)
+                    embed_module = discord.Embed(colour=discord.Colour.from_rgb(255, 217, 71),
+                                                 title=f'Documentation offline du module `{module}` (page {i})',
+                                                 description=f"{result_old}")
+
+                    await ctx.send(embed=embed_module)
 
                     i += 1
                     result = ""
                     result_old = ""
 
-                result_old += word + " "
+                result_old += word + "\n"
 
             if len(result) > 0:
-                embed_function = discord.Embed(colour=discord.Colour.from_rgb(255, 217, 71),
-                                               title=f'Documentation offline du module `{module}` (page {i})',
-                                               description=f"{result_old}")
-                await ctx.send(embed=embed_function)
+                embed_module = discord.Embed(colour=discord.Colour.from_rgb(255, 217, 71),
+                                             title=f'Documentation offline du module `{module}` (page {i})',
+                                             description=f"{result_old}")
 
-            embed_function = discord.Embed(title=f'{ctx.author.name} voici la documentation en ligne du'
-                                                 f' module `{module}`',
-                                           description=f'\n{url}',
-                                           colour=discord.Colour.from_rgb(255, 217, 71))
-            await ctx.send(embed=embed_function)
+                await ctx.send(embed=embed_module)
+
+            embed_module = discord.Embed(title=f'{ctx.author.name} voici la documentation en ligne du'
+                                               f' module `{module}`',
+                                         description=f'\n{url}',
+                                         colour=discord.Colour.from_rgb(255, 217, 71))
+
+            await ctx.send(embed=embed_module)
 
         except ModuleNotFoundError:
             ctx.send(f"{ctx.author.name} ce module n'existe pas dans la library standard !\n"
@@ -93,7 +152,7 @@ class CogPython(commands.Cog):
         if isinstance(error, commands.CommandOnCooldown):
             await ctx.send(f"{ctx.author.mention} cette commande est en cooldown !")
 
-    @commands.command(name="pyfunc", aliases=['pyfhelp', 'help_func'])  # Commandes
+    @commands.command(name="pyfunc", aliases=['help_func'])  # Commandes
     @commands.cooldown(rate=1, per=5, type=commands.BucketType.user)
     async def pyfunc(self, ctx, module, function):
 
@@ -108,20 +167,21 @@ class CogPython(commands.Cog):
             result_old = ""
 
             for word in self.help_function_x:
-                result += word + " "
+                result += word + "\n"
 
                 if len(result) >= 4000:
                     embed_function = discord.Embed(colour=discord.Colour.from_rgb(255, 217, 71),
                                                    title=f'Documentation offline de la fonction `{function}` '
                                                          f'du module `{module}` (page {i})',
                                                    description=f"{result_old}")
+
                     await ctx.send(embed=embed_function)
 
                     i += 1
                     result = ""
                     result_old = ""
 
-                result_old += word + " "
+                result_old += word + "\n"
 
             if len(result) > 0:
                 embed_function = discord.Embed(colour=discord.Colour.from_rgb(255, 217, 71),
@@ -135,6 +195,7 @@ class CogPython(commands.Cog):
                                                  f'`{function} module `{module}`',
                                            description=f'\n{url}',
                                            colour=discord.Colour.from_rgb(255, 217, 71))
+
             await ctx.send(embed=embed_function)
 
         except ModuleNotFoundError:
