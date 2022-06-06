@@ -30,33 +30,45 @@ class CogPython(commands.Cog):
 
         module = module.strip()
 
-        self.help_function_x = [f for f in dir(module) if f[0:2] != "__"]
+        if module in self.std_lib:
 
-        result = ""
-        result_old = ""
-        i = 1
+            self.help_function_x = [f for f in dir(module) if f[0:2] != "__"]
 
-        for word in self.help_function_x:
-            result += word + "\n"
-            if len(result) >= 4000:
+            result = ""
+            result_old = ""
+            i = 1
+
+            for word in self.help_function_x:
+                result += word + "\n"
+                if len(result) >= 4000:
+                    embed_flist = discord.Embed(colour=discord.Colour.from_rgb(255, 217, 71),
+                                                title=f'Ensembles des fonctions du module `{module}` (page {i})',
+                                                description=f"{result_old}")
+
+                    await ctx.send(embed=embed_flist)
+
+                    i += 1
+                    result = ""
+                    result_old = ""
+
+                result_old += word + "\n"
+
+            if len(result) > 0:
                 embed_flist = discord.Embed(colour=discord.Colour.from_rgb(255, 217, 71),
                                             title=f'Ensembles des fonctions du module `{module}` (page {i})',
                                             description=f"{result_old}")
 
                 await ctx.send(embed=embed_flist)
 
-                i += 1
-                result = ""
-                result_old = ""
+        else:
+            await ctx.send(f"{ctx.author.mention} ce module n'existe pas dans la library standard !\n"
+                           f"Voici la liste des modules de la library standards: ")
+            await self.stdlib()
 
-            result_old += word + "\n"
-
-        if len(result) > 0:
-            embed_flist = discord.Embed(colour=discord.Colour.from_rgb(255, 217, 71),
-                                        title=f'Ensembles des fonctions du module `{module}` (page {i})',
-                                        description=f"{result_old}")
-
-            await ctx.send(embed=embed_flist)
+    @pyflist.error
+    async def pyflist_error(self, ctx, error):
+        if isinstance(error, commands.CommandOnCooldown):
+            await ctx.send(f"{ctx.author.mention} cette commande est en cooldown !")
 
     @commands.command(name="stdlib", aliases=["pylibs"])
     @commands.cooldown(rate=1, per=5, type=commands.BucketType.user)
@@ -139,9 +151,9 @@ class CogPython(commands.Cog):
             await ctx.send(embed=embed_module)
 
         except ModuleNotFoundError:
-            ctx.send(f"{ctx.author.name} ce module n'existe pas dans la library standard !\n"
-                     f"Voici la liste des modules de la library standards: "
-                     f'{str(self.std_lib).replace("[", "```").replace("]", "```").replace(self.char, "")}')
+            await ctx.send(f"{ctx.author.mention} ce module n'existe pas dans la library standard !\n"
+                           f"Voici la liste des modules de la library standards: ")
+            await self.stdlib()
 
     @pymodule.error
     async def pymodule_error(self, ctx, error):
@@ -200,8 +212,8 @@ class CogPython(commands.Cog):
 
         except ModuleNotFoundError:
             await ctx.send(f"{ctx.author.mention} ce module n'existe pas dans la library standard !\n"
-                           f"Voici la liste des modules de la library standards: "
-                           f"{str(self.std_lib).replace('[', '```').replace(']', '```')}")
+                           f"Voici la liste des modules de la library standards: ")
+            await self.stdlib()
 
         except NameError:
             await ctx.send(f"{ctx.author.mention} cette fonction n'appartiens pas au module {module} !")
