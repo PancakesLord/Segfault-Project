@@ -15,12 +15,12 @@ class AboutMe(commands.Cog):
     @commands.cooldown(rate=1, per=5, type=commands.BucketType.user)
     async def github(self, ctx):
         github = discord.Embed(title=f'Version de {self.client.user.name}',
-                                description=f"{self.client.version}",
-                                colour=discord.Colour.from_rgb(202, 14, 244))
+                               description=f"{self.client.version}",
+                               colour=discord.Colour.from_rgb(202, 14, 244))
 
         github.add_field(name="Lien du Github",
-                          value="",
-                          inline=False)
+                         value="https://github.com/PancakesLord/Segfault-Project",
+                         inline=False)
 
         github.set_thumbnail(url=self.client.user.avatar_url)
 
@@ -40,7 +40,7 @@ class AboutMe(commands.Cog):
                                 colour=discord.Colour.from_rgb(202, 14, 244))
 
         version.add_field(name="Lien du Github",
-                          value="",
+                          value="https://github.com/PancakesLord/Segfault-Project",
                           inline=False)
 
         version.set_thumbnail(url=self.client.user.avatar_url)
