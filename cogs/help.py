@@ -340,10 +340,8 @@ class Help(commands.Cog):
 
         debut = discord.Embed(colour=discord.Colour.from_rgb(204, 0, 204), title=f'Listes des Commandes de '
                                                                                  f'{self.client.user.name}')
-        debut.set_author(name=f"{self.client.user.name}'s creator: Pancake's Queen",
-                         icon_url="https://images-ext-1.discordapp.net/external/KnxSySfjQOkxAMS8j3F-jlESzL039eBBko2siN"
-                                  "hfVdg/%3Fsize%3D1024/https/cdn.discordapp.com/avatars/352369868227739650/2e584e69dd7"
-                                  "b97560213ae68740f38d1.webp")
+        debut.set_author(name=f"{self.client.user.name}'s creator: ",
+                         icon_url="")
 
         debut.add_field(name=':scroll: Infos',
                         value='Quand vous voyez un '
