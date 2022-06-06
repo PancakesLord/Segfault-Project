@@ -74,22 +74,26 @@ class Help(commands.Cog):
         python = discord.Embed(colour=discord.Colour.from_rgb(255, 217, 71), title=":books: Aide Python")
 
         python.add_field(name=":closed_book: stdlib",
-                         value="Renvoie la liste complète de la library standard python\n"
+                         value="Renvoie la liste complète de la librairie standard python\n"
                                f"Utilisation: `{self.client.command_prefix}[stdlib|pylibs]`",
                          inline=False)
 
-        python.add_field(name=":green_book: pyfunc",
-                         value="Renvoie le lien de la documentation du module entré en paramètre ainsi que sa "
-                               "documentation en offline. Il faut que le module appartienne à la library standard."
-                               f"\nUtilisation: `{self.client.command_prefix}[pymodule|pymhelp|help_module] <module>`")
+        python.add_field(name=":ledger: pyflist",
+                         value="Renvoie la liste complète des fonctions d'un module de la librairie standard python\n"
+                               f"Utilisation: `{self.client.command_prefix}[pyflist|function_list] <module>`")
 
-        python.add_field(name=":orange_book: pymodule",
+        python.add_field(name=":orange_book: pyfunc",
                          value="Renvoie le lien de la documentation d'une fonction du module entré en paramètre ainsi "
                                "que sa documentation en offline. Il faut que le module appartienne à la library "
                                "standard."
-                               f"\nUtilisation: `{self.client.command_prefix}[pyfunc|pyfhelp|help_func] <module> "
+                               f"\nUtilisation: `{self.client.command_prefix}[pyfunc|help_func] <module> "
                                "<fonction>`",
                          inline=False)
+
+        python.add_field(name=":green_book: pymodule",
+                         value="Renvoie le lien de la documentation du module entré en paramètre ainsi que sa "
+                               "documentation en offline. Il faut que le module appartienne à la librairie standard."
+                               f"\nUtilisation: `{self.client.command_prefix}[pymodule|pymhelp|help_module] <module>`")
 
         return python
 
