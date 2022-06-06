@@ -14,13 +14,9 @@ class AboutMe(commands.Cog):
     @commands.command(name="github")
     @commands.cooldown(rate=1, per=5, type=commands.BucketType.user)
     async def github(self, ctx):
-        github = discord.Embed(title=f'Version de {self.client.user.name}',
-                               description=f"{self.client.version}",
+        github = discord.Embed(title=f'Lien du Github de {self.client.user.name}',
+                               description="https://github.com/PancakesLord/Segfault-Project",
                                colour=discord.Colour.from_rgb(202, 14, 244))
-
-        github.add_field(name="Lien du Github",
-                         value="https://github.com/PancakesLord/Segfault-Project",
-                         inline=False)
 
         github.set_thumbnail(url=self.client.user.avatar_url)
 
