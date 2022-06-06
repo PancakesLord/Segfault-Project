@@ -1,4 +1,4 @@
-# Segfault-Project
+# Segfault-Project (FR)
 
 Segfault est un projet de robot Discord permettant de faire un ensemble de choses variées. L'idée de départ viens d'un ensemble d'inspirations que j'ai vu au cours de mes nombreuses années sur Discord. Les principaux robots dont je m'inspire cela dit sont Vexera (https://vexera.io/), Koya (https://koya.gg/) et UnbelieveaBoat (https://unbelievaboat.com/). Certaines idées viennent aussi de mon cerveau étrange.
 
@@ -83,4 +83,89 @@ Actuellement, les features implémentées sont des outils de modérations, une d
 - <u>Github</u>: Affiche le lien de ce reposetory
 - <u>Version</u>: Affiche la version du robot ainsi que le lien de ce reposetory
 
+<hr/>
 
+# Segfault-Project (EN)
+
+Segfault is a Discord robot project that can do a variety of things. The initial idea comes from a set of inspirations I've seen in my many years on Discord. The main bots I'm inspired by though are Vexera (https://vexera.io/), Koya (https://koya.gg/) and UnbelieveaBoat (https://unbelievaboat.com/). Some ideas also come from my strange brain.
+
+The ultimate goal of this bot is to be able to automate all the heavy actions a user can do. Also, the goal is to create an interconnected bot with a maximum of useful services for developers (Example: Documentation of the standard Python library).
+
+Currently, the implemented features are moderation tools, a complete documentation of the standard Python library, connections to Tenor, Giphy and Gelbooru. Role-playing game (RPG) support tools are available alongside a music module.
+
+
+## Summary documentation of the currently implemented modules
+
+### ⚖️ Moderation
+
+- <u>Ban</u>: Allows you to ban a member
+- <u>Clear</u>: Allows you to delete a large number of posts
+- <u>Create_category</u>: Allows you to create a new category
+- <u>Create_channels</u>: Allows you to create a set number of channels (text and voice) in a specific category
+- <u>Get_categories</u>: Allows you to have a complete list of categories with their identifiers
+- <u>Kick</u>: Allows you to kick out a member
+- <u>Unban</u>: Allows you to unban a member
+
+
+### 📚 Python Help
+
+- <u>Stdlib</u>: Returns the complete list of modules in the standard library
+- <u>Pyfunc</u>: Returns the documentation of a function of a module in the standard library
+- <u>Pymodule</u>: Returns the documentation of a module of the standard library
+
+### 📸 Images and Gifs
+
+- <u>Giphy</u>: Retrieves and displays a gif from Giphy.com
+- <u>Nsfwbooru</u>: Retrieves and displays a random image from Gelbooru.com (Not Safe At Work tags are enabled)
+- <u>Sfwbooru</u>: Retrieves and displays a random image from Gelbooru.com (Not Safe At Work tags are disabled)
+- <u>Tenor</u>: Retrieves and displays a gif from Tenor Gif
+
+### 🎭 Role Playing Game
+
+- <u>Area</u>: Displays the RPG record of an area (saved by hand in a database, for now)
+- <u>Adventure</u>: Displays the synopsis of a RPG (saved by hand in a database, for now)
+- <u>Dice</u>: Rolls an n-sided die and returns the result
+- <u>Sheet</u>: Displays the sheet of an NPC (saved by hand in a database, for now)
+
+### 🎷 Music
+
+- <u>Clearqueue</u>: Deletes music in the queue
+- <u>Leave</u>: Disconnects the robot from the voice lounge
+- <u>Now_playing</u>: Displays the music currently playing
+- <u>Pause</u>: Pauses the currently playing music
+- <u>Play</u>: Starts a music present on Youtube
+- <u>Queue</u>: Displays the waiting queue
+- <u>Resume</u>: Resumes playing a paused music
+- <u>Skip</u>: Switches to the next music
+- <u>Summon</u>: Allows the robot to join a voice lounge
+
+### 🔗 Social
+*These commands are inspired by Koya's commands*
+
+- <u>Bang</u>: You shoot someone
+- <u>Hi</u>: You wave at someone
+- <u>Hug</u>: You hug someone
+- <u>Kiss</u>: You kiss someone
+- <u>Pat</u>: You give pats pats to someone
+
+### 🆘 Help
+
+- <u>Help</u>: Displays the full help of the robot
+- <u>Module</u>: Displays full help for a module of the robot
+- <u>Module_list</u>: Displays the list of modules implemented for the robot
+
+### 🗃️ Miscellaneous
+
+- <u>Members</u>: Displays the number of members present on the server
+- <u>Me</u>: Displays a full record of information about the person initiating the order
+- <u>Pancakes</u>: Make pancakes great again!
+- <u>Ping</u>: Returns the latency of the robot
+- <u>Randomchoose</u>: Chooses a solution randomly from a set of options
+- <u>Say</u>: Make the robot say something
+- <u>Strawpoll</u>: Allow to create a strawpoll
+- <u>Userinfo</u>: Allows you to display a complete information sheet about a specific member
+
+### 📔 About
+
+- <u>Github</u>: Displays the link to this reposetory
+- <u>Version</u>: Displays the version of the bot as well as the link to this reposetory
