@@ -9,14 +9,18 @@ Le but ultime de ce bot est de pouvoir automatiser toutes les actions un peu lou
 ### ⚖️ Modération
 
 - <u>Ban</u>: Permet de bannir un membre
-- Clear: Permet de supprimer un grand nombre de messages
-- Create_category: Permet de créer une nouvelle catégorie
-- Create_channels: Permet de créer un nombre déterminé de salons (textuels et vocaux) dans une catégorie spécifique
-- Get_categories: Permet d'avoir la liste complète des catégories avec leur identifiants
-- Kick: Permet d'expulser un membre
-- Unban: Permet de débannir un membre
+- <u>Clear</u>: Permet de supprimer un grand nombre de messages
+- <u>Create_category</u>: Permet de créer une nouvelle catégorie
+- <u>Create_channels</u>: Permet de créer un nombre déterminé de salons (textuels et vocaux) dans une catégorie spécifique
+- <u>Get_categories</u>: Permet d'avoir la liste complète des catégories avec leur identifiants
+- <u>Kick</u>: Permet d'expulser un membre
+- <u>Unban</u>: Permet de débannir un membre
 
 
 ### 📚 Aide Python
 
-- 
+- <u>Stdlib</u>: Renvoie la liste complète des modules de la librairie standard
+- <u>Pyfunc</u>: Renvoie la documentation d'une fonction d'un module de la librairie standard
+- <u>Pymodule</u>: Renvoie la documentation d'un module de la librairie standard
+
+
