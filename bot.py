@@ -15,7 +15,7 @@ intents.members = True
 
 Client = discord.Client()
 client = commands.Bot(command_prefix="seg!", intents=intents)
-client.version = 'Alpha - 1.0'
+client.version = 'Alpha - 1.1'
 client.remove_command('help')
 
 
