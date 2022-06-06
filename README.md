@@ -4,7 +4,9 @@ Segfault est un projet de robot Discord permettant de faire un ensemble de chose
 
 Le but ultime de ce bot est de pouvoir automatiser toutes les actions un peu lourde qu'un utilisateur peut faire. Également, le but est de créer un robot interconnecté avec un maximum de services utiles pour les développeurs.euse.s (Exemple: Documentation de la librairie standard Python).
 
-## Modules actuellement implémentés
+Actuellement, les features implémentées sont des outils de modérations, une documentation complète de la librairie standard de Python, des connexions aux sites Tenor, Giphy ainsi que Gelbooru. Des outils de supports pour des Jeux de Rôles (JDR) sont disponibles aux côtés d'un module musical.
+
+## Documentation résumée des modules actuellement implémentés
 
 ### ⚖️ Modération
 
@@ -36,3 +38,16 @@ Le but ultime de ce bot est de pouvoir automatiser toutes les actions un peu lou
 - <u>Aventure</u>: Affiche le synopsis d'un JDR (enregistrée à la main dans une base de donnée, pour le moment)
 - <u>Dice</u>: Lance un dé à n face et renvoie le résultat
 - <u>Fiche</u>: Affiche la fiche d'une PNJ (enregistrée à la main dans une base de donnée, pour le moment)
+
+### 🎷 Musique
+
+- <u>Clearqueue</u>: Supprime les musiques dans la file d'attentes
+- <u>Leave</u>: Permet de déconnecter le robot du salon vocal
+- <u>Now_playing</u>: affiche la musique en cours de lecture
+- <u>Pause</u>: Met en pause la musique actuellement jouée
+- <u>Play</u>: Lance une musique présente sur Youtube
+- <u>Queue</u>: Affiche la file d'attent
+- <u>Resume</u>: Reprend la lecture d'une musique mise en pause
+- <u>Skip</u>: Passe à la musique suivante
+- <u>Summon</u>: Permet au robot de rejoindre un salon vocal
+
