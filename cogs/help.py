@@ -15,7 +15,6 @@ class Help(commands.Cog):
             "jdr": self.fjdr(),
             "diverses": self.fdiverses(),
             "aide": self.fhelp(),
-            "kappa": self.fsecrets(),
             "aboutme": self.faboutme()
 
         }
@@ -296,29 +295,6 @@ class Help(commands.Cog):
 
         return diverses
 
-    def fsecrets(self):
-
-        secrets = discord.Embed(title=":secret: Secrets",
-                                colour=discord.Colour.greyple(),
-                                description="Bravo ! Tu as trouvé le module avec les commandes secrètes !")
-
-        secrets.add_field(name=":crown: admin",
-                          value="Deviens l'admin du serveur :sunglasses:"
-                                f"\nUtilisation: `{self.client.command_prefix}[admin|admin_power]`",
-                          inline=False)
-
-        secrets.add_field(name=":upside_down:  crepes",
-                          value="Je crois que vous vous êtes trompés..."
-                                "\nUtilisation: "
-                                f"`{self.client.command_prefix}[crêpes|crepes|crepe|crepes]`",
-                          inline=False)
-
-        secrets.add_field(name=':pray: dieu',
-                          value='Invoque dieu.'
-                                f'\nUtilisation: `{self.client.command_prefix}[dieu|god]`',
-                          inline=False)
-
-        return secrets
 
     def faboutme(self):
 
