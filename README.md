@@ -23,6 +23,7 @@ Actuellement, les features implémentées sont des outils de modérations, une d
 ### 📚 Aide Python
 
 - <u>Stdlib</u>: Renvoie la liste complète des modules de la librairie standard
+- <u>Pyflist</u>: Renvoie la liste complètes des fonctions d'un module de la librairie standard
 - <u>Pyfunc</u>: Renvoie la documentation d'une fonction d'un module de la librairie standard
 - <u>Pymodule</u>: Renvoie la documentation d'un module de la librairie standard
 
@@ -110,6 +111,7 @@ Currently, the implemented features are moderation tools, a complete documentati
 ### 📚 Python Help
 
 - <u>Stdlib</u>: Returns the complete list of modules in the standard library
+- <u>Pyflist</u>: Returns the complete list of functions of a module of the standard library
 - <u>Pyfunc</u>: Returns the documentation of a function of a module in the standard library
 - <u>Pymodule</u>: Returns the documentation of a module of the standard library
 
