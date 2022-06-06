@@ -4,6 +4,20 @@ Segfault est un projet de robot Discord permettant de faire un ensemble de chose
 
 Le but ultime de ce bot est de pouvoir automatiser toutes les actions un peu lourde qu'un utilisateur peut faire. Également, le but est de créer un robot interconnecté avec un maximum de services utiles pour les développeurs.euse.s (Exemple: Documentation de la librairie standard Python).
 
-# Modules actuellement implémentés
+## Modules actuellement implémentés
 
 ### ⚖️ Modération
+
+```md
+- Ban: Permet de bannir un membre
+- Clear: Permet de supprimer un grand nombre de messages
+- Create_category: Permet de créer une nouvelle catégorie
+- Create_channels: Permet de créer un nombre déterminé de salons (textuels et vocaux) dans une catégorie spécifique
+- Get_categories: Permet d'avoir la liste complète des catégories avec leur identifiants
+- Kick: Permet d'expulser un membre
+- Unban: Permet de débannir un membre
+```
+
+### 📚 Aide Python
+
+- 
