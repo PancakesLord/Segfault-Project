@@ -6,6 +6,7 @@ Le but ultime de ce bot est de pouvoir automatiser toutes les actions un peu lou
 
 Actuellement, les features implémentées sont des outils de modérations, une documentation complète de la librairie standard de Python, des connexions aux sites Tenor, Giphy ainsi que Gelbooru. Des outils de supports pour des Jeux de Rôles (JDR) sont disponibles aux côtés d'un module musical.
 
+
 ## Documentation résumée des modules actuellement implémentés
 
 ### ⚖️ Modération
@@ -50,4 +51,36 @@ Actuellement, les features implémentées sont des outils de modérations, une d
 - <u>Resume</u>: Reprend la lecture d'une musique mise en pause
 - <u>Skip</u>: Passe à la musique suivante
 - <u>Summon</u>: Permet au robot de rejoindre un salon vocal
+
+### 🔗 Social
+*Ces commandes sont inspirées de celles de Koya*
+
+- <u>Bang</u>: Vous tirez sur quelqu'un
+- <u>Hi</u>: Vous saluez quelqu'un
+- <u>Hug</u>: Vous câlinez quelqu'un
+- <u>Kiss</u>: Vous embrassez quelqu'un
+- <u>Pat</u>: Vous donnez des pats pats à quelqu'un
+
+### 🆘 Aide
+
+- <u>Help</u>: Affiche l'aide complète du robot
+- <u>Module</u>: Affiche l'aide complète d'un module du robot
+- <u>Module_list</u>: Affiche la liste des modules implémentés pour le robot
+
+### 🗃️ Diverses
+
+- <u>Members</u>: Affiche le nombre de membres présents sur le serveur
+- <u>Me</u>: Affiche une fiche complète d'informations sur la personne lançant la commande
+- <u>Pancakes</u>: Make pancakes great again !
+- <u>Ping</u>: Renvoie la latence du robot
+- <u>Randomchoose</u>: Choisi une solution aléatoirement parmis un ensemble d'options
+- <u>Say</u>: Faites dire quelquechose au robot
+- <u>Strawpoll</u>: Permet de créer un strawpoll
+- <u>Userinfo</u>: Permet d'affiche une fiche complète d'informations sur un membre précis
+
+### 📔 À propos
+
+- <u>Github</u>: Affiche le lien de ce reposetory
+- <u>Version</u>: Affiche la version du robot ainsi que le lien de ce reposetory
+
 
