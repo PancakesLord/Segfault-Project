@@ -8,7 +8,6 @@ Le but ultime de ce bot est de pouvoir automatiser toutes les actions un peu lou
 
 ### ⚖️ Modération
 
-```md
 - Ban: Permet de bannir un membre
 - Clear: Permet de supprimer un grand nombre de messages
 - Create_category: Permet de créer une nouvelle catégorie
@@ -16,7 +15,7 @@ Le but ultime de ce bot est de pouvoir automatiser toutes les actions un peu lou
 - Get_categories: Permet d'avoir la liste complète des catégories avec leur identifiants
 - Kick: Permet d'expulser un membre
 - Unban: Permet de débannir un membre
-```
+
 
 ### 📚 Aide Python
 
