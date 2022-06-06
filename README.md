@@ -8,7 +8,7 @@ Le but ultime de ce bot est de pouvoir automatiser toutes les actions un peu lou
 
 ### ⚖️ Modération
 
-- Ban: Permet de bannir un membre
+- <u>Ban</u>: Permet de bannir un membre
 - Clear: Permet de supprimer un grand nombre de messages
 - Create_category: Permet de créer une nouvelle catégorie
 - Create_channels: Permet de créer un nombre déterminé de salons (textuels et vocaux) dans une catégorie spécifique
