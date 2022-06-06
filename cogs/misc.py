@@ -209,21 +209,6 @@ class Miscellaneous(commands.Cog):
         if isinstance(error, commands.CommandOnCooldown):
             await ctx.send(f"{ctx.author.mention}, du calme ! Cette commande est en recharge !")
 
-    # secret command
-    @commands.command(name="crepes", aliases=['crêpes', "crepe", "crêpe"])
-    @commands.cooldown(rate=1, per=5, type=commands.BucketType.user)
-    async def crepes(self, ctx):
-        await ctx.send(f"{ctx.author.mention} je crois que vous vous êtes trompé ! Effectivement, la bonne commande "
-                       f"est `{self.client.command_prefix}pancakes` !\nJe sais que certaine personne ne font pas"
-                       " la différence: voici donc une explication conscise de ce qui les différencies !")
-
-        await self.pancake(ctx)
-
-    @crepes.error
-    async def crepes_error(self, ctx, error):
-        if isinstance(error, commands.CommandOnCooldown):
-            await ctx.send(f"{ctx.author.mention} du calme, cette commande est en recharge !")
-
 
 def setup(client):
     client.add_cog(Miscellaneous(client))
