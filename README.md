@@ -23,4 +23,16 @@ Le but ultime de ce bot est de pouvoir automatiser toutes les actions un peu lou
 - <u>Pyfunc</u>: Renvoie la documentation d'une fonction d'un module de la librairie standard
 - <u>Pymodule</u>: Renvoie la documentation d'un module de la librairie standard
 
+### 📸 Images et Gifs
 
+- <u>Giphy</u>: Permet de récupérer et d'afficher un gif issu de Giphy.com
+- <u>Nsfwbooru</u>: Permet de récupérer et d'afficher une image aléatoire issue du site Gelbooru.com (Les tags "Not Safe At Work" sont activés)
+- <u>Sfwbooru</u>: Permet de récupérer et d'afficher une image aléatoire issue du site Gelbooru.com (Les tags "Not Safe At Work" sont désactivés)
+- <u>Tenor</u>: Permet de récupérer et d'afficher un gif issu de Tenor Gif
+
+### 🎭 Jeu de Rôle
+
+- <u>Area</u>: Affiche la fiche JDR d'une zone (enregistrée à la main dans une base de donnée, pour le moment)
+- <u>Aventure</u>: Affiche le synopsis d'un JDR (enregistrée à la main dans une base de donnée, pour le moment)
+- <u>Dice</u>: Lance un dé à n face et renvoie le résultat
+- <u>Fiche</u>: Affiche la fiche d'une PNJ (enregistrée à la main dans une base de donnée, pour le moment)
